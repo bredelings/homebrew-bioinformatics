@@ -5,8 +5,8 @@ class BaliPhy < Formula
   stable do
     url "https://github.com/bredelings/BAli-Phy.git",
         :using => :git,
-        :revision => "1ed068ee00e7fd2d76779e397a85a1b2b420df9a"
-    version "3.0"
+        :revision => "80ca30e08676fc7ffa52e80ef60cf1ac1bf150a0"
+    version "3.0.2"
   end
 
   head do
@@ -22,7 +22,7 @@ class BaliPhy < Formula
   needs :cxx14
 
   def install
-    system 'meson', 'macbuild', "--prefix=#{prefix}"
+    system 'meson', 'macbuild', "--prefix=#{prefix}", '-Dextra-tools=False'
     cd 'macbuild' do
       system 'ninja'
       system 'ninja', 'install'
@@ -30,7 +30,7 @@ class BaliPhy < Formula
   end
 
   test do
-    system "#{bin}/bali-phy", "#{pkgshare}/examples/sequences/5S-rRNA/5d.fasta", "--iter=150"
+    system "#{bin}/bali-phy", "#{doc}/examples/sequences/5S-rRNA/5d.fasta", "--iter=150"
     system "#{bin}/bp-analyze", "5d-1"
   end
 end
