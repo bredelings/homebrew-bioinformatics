@@ -5,8 +5,8 @@ class BaliPhy < Formula
   stable do
     url "https://github.com/bredelings/BAli-Phy.git",
         :using => :git,
-        :revision => "80ca30e08676fc7ffa52e80ef60cf1ac1bf150a0"
-    version "3.0.2"
+        :revision => "65ea45c7620ab33ac80a97a0eb62cce61396dd4d"
+    version "3.0.3"
   end
 
   head do
@@ -16,6 +16,7 @@ class BaliPhy < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "pandoc" => :build
 
   depends_on "cairo"
 
@@ -24,7 +25,6 @@ class BaliPhy < Formula
   def install
     system 'meson', 'macbuild', "--prefix=#{prefix}", '-Dextra-tools=False'
     cd 'macbuild' do
-      system 'ninja'
       system 'ninja', 'install'
     end
   end
