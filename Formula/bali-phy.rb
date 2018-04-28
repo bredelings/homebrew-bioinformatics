@@ -16,7 +16,8 @@ class BaliPhy < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "pandoc" => :build
+#  Meson breaks when we try to install docs currently.
+#  depends_on "pandoc" => :build
 
   depends_on "cairo"
 
