@@ -5,8 +5,8 @@ class BaliPhy < Formula
   stable do
     url "https://github.com/bredelings/BAli-Phy.git",
         :using => :git,
-        :revision => "c98c6febdad1df575b62d3dd12c4d7c59a07cb9e"
-    version "3.1"
+        :revision => "adfbe44f0bb69a6e774f5041c06184e3e3039164"
+    version "3.1.2"
   end
 
   head do
