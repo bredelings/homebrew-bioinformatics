@@ -5,8 +5,8 @@ class BaliPhy < Formula
   stable do
     url "https://github.com/bredelings/BAli-Phy.git",
         :using => :git,
-        :revision => "e09be6497a881361887c7fc41c56bb36a068b3b3"
-    version "3.1.4"
+        :revision => "e6879a9e7dacce37e74d2db1e94ebc446495d01f"
+    version "3.1.5"
   end
 
   head do
@@ -16,8 +16,7 @@ class BaliPhy < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-#  Meson breaks when we try to install docs currently.
-#  depends_on "pandoc" => :build
+  depends_on "pandoc" => :build
 
   depends_on "cairo"
 
