@@ -1,5 +1,7 @@
 # Bredelings Bioinformatics
 
+I migrated the only formula here (bali-phy) to `brewscio/bio`.
+
 ## How do I install these formulae?
 `brew install bredelings/bioinformatics/<formula>`
 
